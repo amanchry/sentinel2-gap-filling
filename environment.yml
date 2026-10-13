@@ -1,0 +1,13 @@
+name: gdal
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - gdal>=3.6
+  - rasterio>=1.3
+  - numpy
+  - geopandas
+  - shapely>=2
+  - pyproj
+  - pystac-client
+  - matplotlib

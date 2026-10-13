@@ -1,0 +1,18 @@
+# Pipeline outputs (regenerate with: python run_pipeline.py)
+output/*
+!output/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Partial writes and GDAL sidecars
+*.part
+*.part.tif
+*.aux.xml
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/

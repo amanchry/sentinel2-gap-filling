@@ -23,8 +23,8 @@ Outputs are Cloud-Optimised GeoTIFFs with a per-pixel quality layer, one per ind
 ## Installation
 
 ```bash
-conda env create -f environment.yml   # creates the "gdal" environment
-conda activate gdal
+conda env create -f environment.yml   # creates the "s2gapfilling" environment
+conda activate s2gapfilling
 ```
 
 ## Usage
@@ -149,26 +149,6 @@ The 20 m bands (B11, B12) are bilinearly resampled to the output grid. The Scene
 | Reflectance | DN × 0.0001 − 0.1, applied per asset from the `raster:bands` metadata |
 | Cloud mask | Scene Classification Layer classes 0, 1, 3, 8, 9, 10, 11 |
 
-## Project structure
-
-```
-├── config.py            pipeline settings
-├── run_pipeline.py      entry point
-├── environment.yml      conda environment
-├── data/                input data (area-of-interest boundary)
-├── src/
-│   ├── grid.py          AOI, projection and tiling
-│   ├── catalog.py       STAC search and solar-day grouping
-│   ├── extract.py       reading, cloud masking, index computation
-│   ├── indices.py       spectral index definitions
-│   ├── periods.py       output time periods
-│   ├── gapfill.py       method execution per tile
-│   ├── mosaic.py        Cloud-Optimised GeoTIFF assembly
-│   ├── report.py        charts and summaries
-│   ├── common.py        settings, logging, raster I/O
-│   └── methods/         gap-filling methods
-└── output/              generated products; see output/README.md
-```
 
 ## Outputs
 

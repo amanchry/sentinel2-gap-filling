@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Gap-filled Sentinel-2 index time series. Settings live in config.py.
 
-    conda activate gdal
+    conda activate s2gapfilling
     python run_pipeline.py
 
 Stages (config.STAGES):

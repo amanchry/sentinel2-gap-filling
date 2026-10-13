@@ -1,4 +1,4 @@
-name: gdal
+name: s2gapfilling
 channels:
   - conda-forge
 dependencies:
